@@ -1,0 +1,384 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* navbar fix */
+.progress-bar{
+  @apply z-[9999];
+  animation-timeline: scroll();
+}
+.nav-fixed {
+  @apply fixed z-50 h-[60px] bg-white bg-opacity-50 backdrop-blur-sm transition-all ease-linear dark:bg-mydark dark:bg-opacity-80 dark:backdrop-blur-sm;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-active {
+  @apply translate-x-[-20px];
+}
+
+.brand span {
+  @apply -left-0;
+  transition: 0.3s;
+}
+.brand:hover .k1 {
+  @apply -left-1;
+}
+.brand:hover .k2 {
+  @apply left-1;
+}
+
+nav ul .group::after {
+  @apply mx-auto block h-[2px] w-0 bg-primary;
+  content: "";
+  transition: 0.5s;
+}
+
+nav ul .group:hover::after {
+  @apply w-[30px];
+}
+
+.hamburger-line {
+  @apply my-2 block h-[2px] w-[30px] bg-mydark dark:bg-white;
+}
+
+.hamburger-active span:nth-child(1) {
+  @apply rotate-45;
+}
+.hamburger-active span:nth-child(2) {
+  @apply scale-0;
+}
+.hamburger-active span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.quote-active {
+  @apply z-20 scale-100;
+}
+
+#input-dark:checked ~ #dark-icon {
+  @apply translate-y-[-14px];
+}
+#input-dark-small:checked ~ #dark-icon {
+  @apply translate-y-[-14px];
+}
+
+.hero .skills a:hover svg {
+  @apply animate-bounce;
+}
+
+.hero-image {
+  @apply  rounded-full  dark:bg-primary bg-primary;
+  /* box-shadow: 8px 8px #ffbe0b; */
+  border: 2px solid #ffbe0b;
+}
+
+
+.hero-image-wrap:after{
+  @apply md:w-24 w-20 md:h-24 h-20 rounded-md bg-primary block absolute left-3 bottom-3;
+  content : '';
+  transition:0.4s;
+}
+
+
+.portofolio {
+  @apply relative h-full w-full bg-cover;
+  background-image: url("/dist/img/porto.jpg");
+  background-repeat: no-repeat;
+  z-index: 5;
+  background-position: 0px -140px;
+}
+
+/* portofolio slider */
+.portofolio::after {
+  @apply absolute top-0 block h-full w-full;
+  background-image: linear-gradient(to top, #ffbe0ba5, rgba(0, 0, 0, 0.532));
+  z-index: -9999999;
+  content: "";
+}
+.portofolio .card {
+  @apply overflow-hidden rounded-lg;
+}
+.portofolio .card .dec {
+  @apply relative px-5 pb-7;
+}
+.portofolio .card .dec .tech span {
+  @apply relative;
+}
+.portofolio .card .dec .tech span::after {
+  @apply absolute -left-2 top-5 rotate-[-70deg] text-primary opacity-0;
+  transition: 0.2s;
+  content: ">";
+}
+.portofolio .card .dec .tech span:hover::after {
+  @apply opacity-100;
+}
+.portofolio .slider-large-device .card img {
+  @apply h-60 scale-150 grayscale transition-transform;
+}
+.portofolio .slider-large-device .card:hover img {
+  @apply scale-100 grayscale-0;
+}
+
+.portofolio .slider-phone-device .card img {
+  @apply h-40 scale-125 grayscale transition-transform;
+}
+.portofolio .slider-phone-device .card:hover img {
+  @apply scale-100 grayscale-0;
+}
+
+/* bazar */
+.bazar .github{
+  transition:0.4s;
+}
+
+.bazar .github-bg-hov{
+  transition:0.4s;
+}
+.bazar .github svg.active{
+  @apply animate-goyang;
+}
+.bazar .github-bg-hov.active{
+  transform : scale(90);
+}
+.bazar .github.active{
+  transform : scale(90);
+}
+
+/* agency */
+.agency .github{
+  transition:0.4s;
+}
+
+.agency .github-bg-hov{
+  transition:0.4s;
+}
+.agency .github svg.active{
+  @apply animate-goyang;
+}
+.agency .github-bg-hov.active{
+  transform : scale(90);
+}
+.agency .github.active{
+  transform : scale(90);
+}
+/* mymovie */
+.mymovie .github{
+  transition:0.4s;
+}
+
+.mymovie .github-bg-hov{
+  transition:0.4s;
+}
+.mymovie .github svg.active{
+  @apply animate-goyang;
+}
+.mymovie .github-bg-hov.active{
+  transform : scale(90);
+}
+.mymovie .github.active{
+  transform : scale(90);
+}
+/* aclhutz */
+.aclhutz .github{
+  transition:0.4s;
+}
+
+.aclhutz .github-bg-hov{
+  transition:0.4s;
+}
+.aclhutz .github svg.active{
+  @apply animate-goyang;
+}
+.aclhutz .github-bg-hov.active{
+  transform : scale(90);
+}
+.aclhutz .github.active{
+  transform : scale(90);
+}
+/* bazar-phone */
+.bazar-phone .github{
+  transition:0.4s;
+}
+
+.bazar-phone .github-bg-hov{
+  transition:0.4s;
+}
+.bazar-phone .github svg.active{
+  @apply animate-goyang;
+}
+.bazar-phone .github-bg-hov.active{
+  transform : scale(90);
+}
+.bazar-phone .github.active{
+  transform : scale(90);
+}
+
+/* agency-phone */
+.agency-phone .github{
+  transition:0.4s;
+}
+
+.agency-phone .github-bg-hov{
+  transition:0.4s;
+}
+.agency-phone .github svg.active{
+  @apply animate-goyang;
+}
+.agency-phone .github-bg-hov.active{
+  transform : scale(90);
+}
+.agency-phone .github.active{
+  transform : scale(90);
+}
+
+/* mymovie-phone */
+.mymovie-phone .github{
+  transition:0.4s;
+}
+
+.mymovie-phone .github-bg-hov{
+  transition:0.4s;
+}
+.mymovie-phone .github svg.active{
+  @apply animate-goyang;
+}
+.mymovie-phone .github-bg-hov.active{
+  transform : scale(90);
+}
+.mymovie-phone .github.active{
+  transform : scale(90);
+}
+
+/* aclhutz-phone */
+.aclhutz-phone .github{
+  transition:0.4s;
+}
+
+.aclhutz-phone .github-bg-hov{
+  transition:0.4s;
+}
+.aclhutz-phone .github svg.active{
+  @apply animate-goyang;
+}
+.aclhutz-phone .github-bg-hov.active{
+  transform : scale(90);
+}
+.aclhutz-phone .github.active{
+  transform : scale(90);
+}
+
+/* .portofolio .slider-phone-device .card .github:hover, .portofolio .slider-large-device .card .github:hover{
+transform : scale(40);
+}
+.portofolio .slider-phone-device .card .github:hover span, .portofolio .slider-large-device .card .github:hover span{
+  @apply invisible;
+}
+.portofolio .slider-phone-device .card .github:hover .dec-hover, .portofolio .slider-large-device .card .github:hover .dec-hover{
+  @apply top-0 left-0;
+  transform : scale(1);
+} */
+
+
+
+.portofolio .pagination .swiper-button-prev {
+  @apply absolute left-24 mt-7 text-primary;
+}
+.portofolio .pagination .swiper-button-next {
+  @apply absolute right-24 mt-7 text-primary;
+}
+.portofolio .pagination-phone .swiper-button-prev {
+  @apply mt-1 text-primary;
+}
+.portofolio .pagination-phone .swiper-button-next {
+  @apply mt-1 text-primary;
+}
+
+@media only screen and (max-width: 415px) {
+  .portofolio {
+    @apply relative h-full w-full bg-cover;
+    background-image: url("/dist/img/porto.jpg");
+    background-repeat: repeat;
+    z-index: 5;
+    background-position: 0px 50px;
+  }
+}
+
+/*end portofolio slider */
+
+.btn-shadow {
+  box-shadow: 0.3rem 0.3rem #ffbe0b;
+  border: 1px solid #ffbe0b;
+}
+.btn-shadow:hover {
+  transform: translate(0.12rem, 0.12rem);
+  box-shadow: 0.2rem 0.2rem #ffbe0b;
+}
+.btn-shadow:active {
+  transform: translate(0.125rem, 0.125rem);
+  box-shadow: 0.2rem 0.2rem #ffbe0b;
+}
+
+/* LOADING ANIMATION */
+.spinner .rec1,
+.spinner .rec2,
+.spinner .rec3,
+.spinner .rec4,
+.spinner .rec5,
+.spinner .rec6 {
+  @apply rounded-full;
+  background-color: #ffbe0b;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rec1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.spinner .rec2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.spinner .rec3 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.spinner .rec4 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+.spinner .rec5 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+.spinner .rec6 {
+  -webkit-animation-delay: -0.6;
+  animation-delay: -0.6;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
