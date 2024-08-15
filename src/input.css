@@ -68,7 +68,7 @@ nav ul .group:hover::after {
 
 .hero-image {
   @apply  rounded-full  dark:bg-primary bg-primary;
-  /* box-shadow: 8px 8px #ffbe0b; */
+  /* box-shadow: 8px 8px #ffbe0b; */ 
   border: 2px solid #ffbe0b;
 }
 
